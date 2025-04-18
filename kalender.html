@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a class="a1" href="index.html">HSC</a> <a class="a2" href="index.html">SALMONELLA</a></div>
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776; <!-- Unicode hamburger icon -->
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="info.html">Info</a></li>
+      <!-- <li class="dropdown">
+        <a href="praesidium.html">Praesidium</a>
+        <ul class="dropdown-menu">
+          <li><a href="pro-praesidium.html">Pro Praesidium</a></li>
+        </ul>
+      </li>-->
+      <li><a href="praesidium.html">Praesidium</a></li>
+      <li><a href="pro-praesidium.html">Pro Praesidia</a></li>
+      <li><a href="kalender.html">Kalender</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+    </ul>
+  </nav>
+
+  <!-- main -->
+<section class="main_kalender">
+  <div class="kalender-wrapper">
+    <iframe
+      src="https://calendar.google.com/calendar/embed?src=gmdbd1cf3l8t7149c9q2bvl738%40group.calendar.google.com&ctz=Europe%2FBrussels"
+      style="border: 0"
+      frameborder="0"
+      scrolling="no">
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourpage" target="_blank">
+        <img src="images/logos/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="images/logos/instagram.png" alt="Instagram" />
+      </a>
+      <a href="mailto:email@example.com">
+        <img src="images/logos/gmail.png" alt="Email" />
+      </a>
+    </div>
+    <p>Overpoortstraat 74</p>
+    <p>9000 Gent</p>
+    <p>&copy; 2025 HSC Salmonella. Alle rechten voorbehouden.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

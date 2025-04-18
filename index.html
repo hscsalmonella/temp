@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a class="a1" href="index.html">HSC</a> <a class="a2" href="index.html">SALMONELLA</a></div>
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776; <!-- Unicode hamburger icon -->
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="info.html">Info</a></li>
+      <!-- <li class="dropdown">
+        <a href="praesidium.html">Praesidium</a>
+        <ul class="dropdown-menu">
+          <li><a href="pro-praesidium.html">Pro Praesidium</a></li>
+        </ul>
+      </li>-->
+      <li><a href="praesidium.html">Praesidium</a></li>
+      <li><a href="pro-praesidium.html">Pro Praesidia</a></li>
+      <li><a href="kalender.html">Kalender</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+    </ul>
+  </nav>
+
+  <!-- Fotocollage / Carousel -->
+  <section class="carousel">
+    <div class="carousel-overlay"></div>
+    <div class="carousel-text">EEN CLUB VAN KAMERADEN</div>
+    <img src="images/slides/slide_1.png" class="carousel-img active" />
+    <img src="images/slides/slide_2.jpg" class="carousel-img" />
+    <img src="images/slides/slide_3.png" class="carousel-img" />
+    <img src="images/slides/slide_4.png" class="carousel-img" />
+    <img src="images/slides/slide_5.png" class="carousel-img" />
+    <img src="images/slides/slide_6.png" class="carousel-img" />
+    <img src="images/slides/slide_7.png" class="carousel-img" />
+  </section>
+
+  <!-- Extra afbeelding -->
+  <section class="single-photo">
+    <div class="photo-text">
+      <h2>Gent beeft, Salmonella LEEFT!</h2>
+      <p>
+        Van harte welkom op de website van HSC Salmonella. Deze site heeft als doel jullie in contact te brengen met onze studentenclub zodat we jullie een onvergetelijke studententijd kunnen bezorgen!
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourpage" target="_blank">
+        <img src="images/logos/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank">
+        <img src="images/logos/instagram.png" alt="Instagram" />
+      </a>
+      <a href="mailto:email@example.com">
+        <img src="images/logos/gmail.png" alt="Email" />
+      </a>
+    </div>
+    <p>Overpoortstraat 74</p>
+    <p>9000 Gent</p>
+    <p>&copy; 2025 HSC Salmonella. Alle rechten voorbehouden.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
