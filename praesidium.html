@@ -85,6 +85,17 @@
     </div>
   </section>
 
+  <!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <img id="modalImage" src="" alt="Foto">
+    <h2 id="modalName"></h2>
+    <p class="modal-role" id="modalRole"></p>
+    <div id="modalQA"></div>
+  </div>
+</div>
+
   <!-- Footer -->
   <footer>
     <div class="social-icons">
@@ -104,5 +115,235 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const members = [
+  {
+    name: "Torrin De Wree",
+    role: "Praeses",
+    image: "images/praesidium/Praeses.jpg",
+    qa: [
+      ["Burgelijke staat", "Bezet/looking for a sugar mommy"],
+      ["Studies", "Elektromechanica"],
+      ["Hobby's", "Slapen en zuipe"],
+      ["Favoriete café", "Cuba, Deli"],
+      ["Favoriete drank", "Rode Vodka"],
+      ["Favoriet lied uit codex", "Home on the range"],
+      ["Waarom ben je lid geworden", "Wou nieuwe mense lere kenne om mee te zuipen"],
+      ["Zatste moment/blunder", "Beetje te veel wijn gezope op een pre en plots wou ik mijn broek nonstop uitdoen in de cuba"],
+      ["Meest gênante moment", "Opstaan en horen da heel de cuba u piemel heeft gezien"],
+      ["Toekomstplannen", "Sterven aan alcoholvergifteging"],
+      ["Belangerijkste gebeurtenis in je leven", "Te horen krijgen da men lever ok is"],
+      ["Levensmoto", "Zolang da ge fun hebt ist goe, anders doe ge iets mis"]
+    ]
+  },
+  {
+    name: "Casper Bieseman",
+    role: "Vice-Praeses",
+    image: "images/praesidium/Vice.png",
+    qa: [
+    ["Burgelijke staat", "In relatie met bier"],
+      ["Studies", "Toegepaste Informatica"],
+      ["Hobby's", "Slapen"],
+      ["Favoriete café", "Molotov"],
+      ["Favoriete drank", "Westmalle Trippel"],
+      ["Favoriet lied uit codex", "Seven drunk nights"],
+      ["Waarom ben je lid geworden", "Er waren gratis pinten"],
+      ["Zatste moment/blunder", "Ik wou dat ik het nog wist"],
+      ["Meest gênante moment", "Ik wou dat ik het nog wist"],
+      ["Toekomstplannen", "afstuderen"],
+      ["Belangerijkste gebeurtenis in je leven", "kunnen wandelen"],
+      ["Levensmoto", "Lauwe cara, beste cara"]
+    ]
+  },
+  {
+    name: "Mirte Bosmans",
+    role: "Quaestor",
+    image: "images/praesidium/Q.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Liyah Bieseman",
+    role: "Ab-Actis",
+    image: "images/praesidium/Ab.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Febe Declerck",
+    role: "P.R.",
+    image: "images/praesidium/PR.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Ibe Schuddinck",
+    role: "Schachtentemmer",
+    image: "images/praesidium/Temmer.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Jordy M.",
+    role: "Sportleider",
+    image: "images/praesidium/Sport.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Ben Cremer",
+    role: "Cantor",
+    image: "images/praesidium/Cantor.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Maarten Wens",
+    role: "Zedenmeester",
+    image: "images/praesidium/Zeden.jpg",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  {
+    name: "Tiebe Rutten",
+    role: "Webmaster",
+    image: "images/praesidium/Web.png",
+    qa: [
+    ["Burgelijke staat", "Stella"],
+      ["Studies", "Zwemmen"],
+      ["Hobby's", "Rood"],
+      ["Favoriete café", "Foute muziek"],
+      ["Favoriete drank", "Hond"],
+      ["Favoriet lied uit codex", "Nee!"],
+      ["Waarom ben je lid geworden", "Geneeskunde"],
+      ["Zatste moment/blunder", "SalmoTD"],
+      ["Meest gênante moment", "Dansen op tafels"],
+      ["Toekomstplannen", "Frietjes"],
+      ["Belangerijkste gebeurtenis in je leven", "Vroege lessen"],
+      ["Levensmoto", "Minister van feest"]
+    ]
+  },
+  // Voeg ook de andere leden hier toe...
+];
+
+// Eventlistener toevoegen aan elk praesidium-member blok
+document.querySelectorAll('.praesidium-member').forEach((el, index) => {
+  el.addEventListener('click', () => {
+    openModal(members[index]);
+  });
+});
+
+function openModal(member) {
+  document.getElementById("modalImage").src = member.image;
+  document.getElementById("modalName").textContent = member.name;
+  document.getElementById("modalRole").textContent = member.role;
+
+  const qaContainer = document.getElementById("modalQA");
+  qaContainer.innerHTML = "";
+
+  member.qa.forEach(([q, a]) => {
+    const div = document.createElement("div");
+    div.className = "qa";
+    div.innerHTML = `<strong>${q}</strong><p>${a}</p>`;
+    qaContainer.appendChild(div);
+  });
+
+  document.getElementById("modalOverlay").style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").style.display = "none";
+}
+
+// Optioneel: Sluit modal als je buiten klikt
+document.getElementById("modalOverlay").addEventListener("click", e => {
+  if (e.target.id === "modalOverlay") closeModal();
+});
+
+  </script>
 </body>
 </html>
