@@ -474,7 +474,22 @@ const praesidiumData = [
       Webmaster : "Arvid Van Dorpe",
       Clubcafé: "Cuba / The Zone",
       img: "2324"
-  }
+  },
+  {
+    Jaar: "'24-'25",
+    Praeses: "Torrin De Wree",
+    Vicepraeses: "Casper Bieseman",
+    Quaestor: "Mirte Bosmans",
+    AbActis: "Liyah Bieseman",
+    Cantor: "Ben Cremer",
+    Schachtentemmer: "Ibe Schuddinck",
+    Sportleider: "Jordy Moenssens",
+    Zedenmeester: "Maarten (Makke) Wens",
+    PR: "Febe Declercq",
+    Webmaster : "Tiebe Rutten",
+    Clubcafé: "Cuba / The Zone",
+    img: "2324"
+}
 ].reverse()
 
 const yearSelector = document.getElementById("year-selector");
