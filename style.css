@@ -815,6 +815,16 @@
 }
 
 
+h4 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+p:empty {
+    display: block;
+    height: 1em;
+}
+
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
