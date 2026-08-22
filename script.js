@@ -489,6 +489,20 @@ const praesidiumData = [
     Webmaster : "Tiebe Rutten",
     Clubcafé: "Cuba / The Zone",
     img: "2324"
+},
+  {
+    Jaar: "'25-'26",
+    Praeses: "Tiebe Rutten",
+    Vicepraeses: "Oba De Beule",
+    Quaestor: "Tristan Goeteyn",
+    AbActis: "Yana Daems",
+    Cantor: "Robbe D'Hooge",
+    Schachtentemmer: "Lowie Averhals",
+    Sportleider: "Lowie Averhals",
+    PR: "Roos Muhring",
+    Webmaster : "Tuur Wauters",
+    Clubcafé: "Cuba / The Zone",
+    img: "2324"
 }
 ].reverse()
 
